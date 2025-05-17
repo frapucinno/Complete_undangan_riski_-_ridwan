@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undangan {{nama_panggilan_wanita}} & {{nama_panggilan_pria}}</title>
+  <title>Undangan <?= Nama_Panggilan_Wanita ?> & <?= Nama_Panggilan_Pria ?></title>
   <style>
     /* Mengatur keseluruhan tampilan halaman */
     body {
@@ -465,8 +465,8 @@
       <!-- isi undangan -->
       <section class="hero-kanan">
         <p class="keterangan1">The Wedding of</p>
-        <h1 class="judul">{{nama_panggilan_wanita}} & {{nama_panggilan_pria}}</h1>
-        <p class="tanggal">{{tanggal}}</p>
+        <h1 class="judul"><?= Nama_Panggilan_Wanita ?> & <?= Nama_Panggilan_Pria ?></h1>
+        <p class="tanggal"><?= Tanggal_Resepsi ?></p>
 
         <div class="scroll-hint">
             <p>Scroll ke bawah untuk melihat detail acara</p>
@@ -478,7 +478,7 @@
 
       <section class="foto-love">
         <div class="zoom-in">
-            <img src="{{foto_utama}}" alt="Foto Prewedding" style="width: 100%; border-radius: 12px;" />
+            <img src="<?= Foto_utama ?>" alt="Foto Prewedding" style="width: 100%; border-radius: 12px;" />
         </div>
       </section>
       
@@ -503,16 +503,16 @@
         <div class="bride">
             <div class="bride">
             <img src="bride.jpeg" alt="Foto bride" style="width: 200px; border-radius: 100px;" />
-            <h1 class="panggilan1">{{nama_panggilan_wanita}}</h1>
-            <h2 class="nama_lengkap1">{{nama_lengkap_wanita}}</h2>
-            <p>Putri {{anak_ke_bride}} dari Bapak {{nama_ayah_bride}}<br>
-            & {{nama_ibu_bride}}</p>
+            <h1 class="panggilan1"><?= Nama_Panggilan_Wanita ?></h1>
+            <h2 class="nama_lengkap1"><?= Nama_Lengkap_Wanita ?></h2>
+            <p>Putri <?= Anak_Ke- ?> dari Bapak <?= Nama_Ayah_Wanita><br>
+            & Ibu <?= Nama_Ibu_Wanita></p>
             <h1>&</h1>
             <img src="groom.jpeg" alt="Foto bride" style="width: 200px; border-radius: 100px;" />
-            <h1 class="panggilan1">{{nama_panggilan_pria}}</h1>
-            <h2 class="nama_lengkap1">{{nama_lengkap_pria}}</h2>
-            <p>Putra {{anak_ke_groom}} dari Bapak {{nama_ayah_groom}}<br>
-            & Ibu {{nama_ibu_groom}}</p>
+            <h1 class="panggilan1"><?= Nama_Panggilan_Pria ?></h1>
+            <h2 class="nama_lengkap1"><?= Nama_Lengkap_Pria ?></h2>
+            <p>Putra <?= Anak_Ke-(Pria) ?> dari Bapak <?= Nama_Ayah_Pria ?><br>
+            & Ibu <?= Nama_Ibu_Pria ?></p>
         </div>
         </div>
       </section>
@@ -531,11 +531,11 @@
       <section class="box-acara">
         <div class="isi">
             <h2>AKAD NIKAH</h2>
-            <p>{{hari_akad}}</p>
-            <h1>{{tgl_akad}}</h1>
-            <p>{{bulan_tahun_akad}}</p>
-            <p>Pukul: {{jam_akad}}</p>
-            <p>📍 {{lokasi_akad}}</p>
+            <p>hari_akad</p>
+            <h1><?= Tanggal_Akad ?></h1>
+            <p>bulan_tahun_akad</p>
+            <p>Pukul: <?= Jam_Akad ?></p>
+            <p>📍 <?= Lokasi_Akad ?></p>
             <a href="#" class="btn-lokasi">📌 LIHAT LOKASI</a>
         </div>
       </section>
@@ -543,11 +543,11 @@
       <section class="box-acara">
         <div class="resepsi">
             <h2>RESEPSI</h2>
-            <p>{{hari_resepsi}}</p>
-            <h1>{{tgl_respsi}}</h1>
-            <p>{{bulan_tahun_respsi}}</p>
-            <p>Pukul: {{jam_respsi}} - Selesai</p>
-            <p>📍 {{lokasi_respsi}}</p>
+            <p>hari_resepsi</p>
+            <h1><?= Tanggal_Resepsi ?></h1>
+            <p>bulan_tahun_respsi</p>
+            <p>Pukul: <?= Jam_Resepsi ?> - Selesai</p>
+            <p>📍 <?= Lokasi_Resepsi ?></p>
             <a href="#" class="btn-lokasi">📌 LIHAT LOKASI</a>
         </div>
       </section>
@@ -590,21 +590,21 @@
           <div class="gift-content">
             <!-- Konten rekening dan alamat -->
             <div class="bank-card">
-              <p>{{rekening1}}<br><strong>{{nama_rekening1}}</strong></p>
-              <button onclick="copyToClipboard('{{rekening1}}')">Copy</button>
+              <p><?= Rekening_1 ?><br><strong><?= Nama_Pemilik_Rekening_1 ?></strong></p>
+              <button onclick="copyToClipboard('<?= Rekening_1 ?>')">Copy</button>
             </div>
 
             <div class="bank-card">
-              <p>{{rekening2}}<br><strong>{{nama_rekening2}}</strong></p>
-              <button onclick="copyToClipboard('rekening2')">Copy</button>
+              <p><?= Rekening_2 ?><br><strong><?= Nama_Pemilik_Rekening_2 ?></strong></p>
+              <button onclick="copyToClipboard('<?= Rekening_2 ?>')">Copy</button>
             </div>
 
             <div class="gift-info">
               <h3>🎁 Kirim Hadiah</h3>
               <p>
-                Nama Penerima: {{penerima_hadiah}}<br>
-                No HP: {{hp_penerima_hadiah}}<br>
-                Alamat: {{alamat_hadiah}}
+                Nama Penerima: <?= Nama_Penerima_Hadiah ?><br>
+                No HP: <?= No_HP_Penerima_Hadiah ?><br>
+                Alamat: <?= Alamat_Penerima_Hadiah ?>
               </p>
             </div>
           </div>
@@ -746,7 +746,7 @@
       });
       
       // Ubah tanggal ini ke tanggal pernikahanmu (format: YYYY-MM-DDTHH:MM:SS)
-    const weddingDate = new Date("{{tanggal_countdown}}").getTime();
+    const weddingDate = new Date("<?= Tanggal_Akad ?>").getTime();
 
     const updateCountdown = () => {
         const now = new Date().getTime();
